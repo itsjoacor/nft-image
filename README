@@ -57,6 +57,7 @@ contract CustomERC1155 {
         string imageUrl;
     }
 
+
     mapping(uint256 => Metadata) public metadatas;
     mapping(address => mapping(uint256 => uint256)) public balances;
 
