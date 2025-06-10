@@ -1,3 +1,46 @@
+# 🖼️ NFT Minter JR - Contrato ERC-1155 personalizado
+
+¡Bienvenidos! Este proyecto contiene un **contrato inteligente en Solidity** que permite **crear NFTs únicos** (tokens digitales) con **metadatos guardados en la blockchain**. Está pensado para ser simple, seguro y... ¡hasta tu tía lo puede entender! 👵✨
+
+---
+
+## 💡 ¿Qué hace este contrato?
+
+Este contrato permite al "dueño" del contrato (es decir, quien lo despliega) **crear NFTs con datos personalizados**, como por ejemplo:
+
+- 🏷️ **Título**
+- 📝 **Descripción**
+- 🧾 **Nombre**
+- 📅 **Fecha**
+- 🖼️ **URL de imagen**
+
+Cada vez que se crea un NFT, se guarda esa información junto con un número de ID único (Token ID), y se envía a la dirección que el dueño indique. Es decir: ¡es como regalarle una postal digital única a alguien, pero grabada para siempre en la blockchain! 🎁🔐
+
+---
+
+## ⚙️ ¿Qué tecnologías usa?
+
+- ✅ **Solidity 0.8.20**
+- ✅ Contrato tipo **ERC-1155 personalizado**
+- ✅ Los metadatos (título, descripción, etc.) se guardan directamente **en la blockchain**
+- ✅ Usa un evento llamado `TransferSingle` para que otras apps puedan detectar cuándo se creó un NFT
+
+---
+
+## 🔐 Seguridad
+
+- Solo el dueño del contrato puede crear NFTs (gracias a la función `onlyOwner`)
+- Nadie más puede modificar lo que ya fue minteado
+- La imagen es fija o se pasa como URL, ¡y se guarda de forma permanente junto al NFT!
+
+---
+
+## 👀 ¿Cómo se ve un NFT?
+
+Una vez creado, se puede ver en la web que está conectada a este contrato. Cada tarjeta NFT muestra:
+
+
+
 // SPDX-License-Identifier: MIT
 //contact_Address= 0x2E14CD8D9ecfF34c941c69acE8FD9c17020Ef6Cb 
 pragma solidity ^0.8.20;
